@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>養育指南 · 喵喵之家</title>
+<meta name="description" content="養貓前必讀：準備清單、飲食禁忌、貓砂盆管理、醫療預防、急診徵兆與行為互動。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐱</text></svg>">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav container" aria-label="主導覽">
+    <a class="logo" href="index.html">
+      <span class="logo-mark" aria-hidden="true">🐱</span>
+      喵喵之家
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">首頁</a></li>
+      <li><a href="cats.html">貓咪圖鑑</a></li>
+      <li><a href="guide.html">養育指南</a></li>
+      <li><a href="adopt.html">領養闖關</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="container section">
+
+  <div class="section-head">
+    <h1>養育指南 📖</h1>
+    <p>這裡是「養育知識問答」那一關的教材。看完再去挑戰，你會發現題目都在這裡面。</p>
+  </div>
+
+  <div class="grid" id="guide-grid" style="grid-template-columns:repeat(auto-fill,minmax(320px,1fr))"></div>
+
+  <div class="card" style="margin-top:2rem;background:linear-gradient(150deg,var(--cream-deep),#FFE9DC);text-align:center">
+    <h2>準備好了嗎？</h2>
+    <p class="muted">知識看完了，來實際試試看三關領養闖關吧。</p>
+    <a class="btn" href="adopt.html">🎮 前往領養闖關</a>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p><strong>🐾 喵喵之家</strong> · 領養代替購買，不離不棄</p>
+    <p style="font-size:.88rem">本頁內容為一般性衛教整理，不能取代獸醫師的診斷。<br>
+      貓咪有任何異狀，請儘速就醫。</p>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/ui.js"></script>
+<script>
+  (function () {
+    'use strict';
+    document.addEventListener('DOMContentLoaded', function () {
+      const { GUIDE_SECTIONS } = window.CatData;
+      const { escapeHtml } = window.CatUI;
+
+      document.getElementById('guide-grid').innerHTML = GUIDE_SECTIONS.map(function (sec) {
+        return '<article class="card">' +
+          '<h2 style="font-size:1.25rem">' + sec.icon + ' ' + escapeHtml(sec.title) + '</h2>' +
+          '<ul style="padding-left:1.2rem;margin:0">' +
+            sec.items.map(function (item) {
+              return '<li style="margin-bottom:.5rem">' + escapeHtml(item) + '</li>';
+            }).join('') +
+          '</ul>' +
+        '</article>';
+      }).join('');
+    });
+  })();
+</script>
+
+</body>
+</html>

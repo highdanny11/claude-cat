@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>領養闖關 · 喵喵之家</title>
+<meta name="description" content="三關領養闖關：生活條件檢視、養育知識問答、一週照顧模擬，通關後取得領養資格證書與貓咪媒合推薦。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐱</text></svg>">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/game.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav container" aria-label="主導覽">
+    <a class="logo" href="index.html">
+      <span class="logo-mark" aria-hidden="true">🐱</span>
+      喵喵之家
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">首頁</a></li>
+      <li><a href="cats.html">貓咪圖鑑</a></li>
+      <li><a href="guide.html">養育指南</a></li>
+      <li><a href="adopt.html">領養闖關</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="container section">
+  <div class="game-shell">
+
+    <nav class="stage-track" id="stage-track" aria-label="闖關進度"></nav>
+
+    <div id="game-root" aria-live="polite">
+      <p class="text-center muted">載入中⋯ 🐾</p>
+    </div>
+
+    <p class="text-center" style="margin-top:2rem">
+      <button class="btn btn-ghost btn-sm" type="button" id="reset-btn">🔄 清除進度，重新開始</button>
+    </p>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p><strong>🐾 喵喵之家</strong> · 領養代替購買，不離不棄</p>
+    <p style="font-size:.88rem">本闖關為示範用的教育性練習，不代表任何實際機構的領養審核標準。</p>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/room.js"></script>
+<script src="js/game.js"></script>
+
+</body>
+</html>

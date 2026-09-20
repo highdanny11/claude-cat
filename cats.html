@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>貓咪圖鑑 · 喵喵之家</title>
+<meta name="description" content="認識喵喵之家等家的貓咪，依年齡、活動力與收藏篩選。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐱</text></svg>">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav container" aria-label="主導覽">
+    <a class="logo" href="index.html">
+      <span class="logo-mark" aria-hidden="true">🐱</span>
+      喵喵之家
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">首頁</a></li>
+      <li><a href="cats.html">貓咪圖鑑</a></li>
+      <li><a href="guide.html">養育指南</a></li>
+      <li><a href="adopt.html">領養闖關</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="container section">
+
+  <div class="section-head">
+    <h1>等家的貓咪們 🐾</h1>
+    <p>牠們都已經結紮、施打疫苗、植入晶片。點開卡片看看牠們的故事與需求，
+      喜歡的話可以先收藏起來。</p>
+  </div>
+
+  <div class="filter-bar" id="filter-bar" role="group" aria-label="貓咪篩選">
+    <button class="chip" type="button" data-filter="all" aria-pressed="true">全部</button>
+    <button class="chip" type="button" data-filter="kitten" aria-pressed="false">幼貓 (≤2 歲)</button>
+    <button class="chip" type="button" data-filter="adult" aria-pressed="false">成貓 (3-6 歲)</button>
+    <button class="chip" type="button" data-filter="senior" aria-pressed="false">熟齡 (7 歲以上)</button>
+    <button class="chip" type="button" data-filter="calm" aria-pressed="false">文靜型</button>
+    <button class="chip" type="button" data-filter="active" aria-pressed="false">活潑型</button>
+    <button class="chip" type="button" data-filter="novice" aria-pressed="false">新手友善</button>
+    <button class="chip" type="button" data-filter="favorite" aria-pressed="false">💛 我的收藏</button>
+  </div>
+
+  <p class="text-center muted" id="result-count" aria-live="polite"></p>
+
+  <div class="grid" id="cat-grid"></div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p><strong>🐾 喵喵之家</strong> · 領養代替購買，不離不棄</p>
+    <p style="font-size:.88rem">本網站為示範用的靜態練習專案，貓咪資料與領養流程皆為虛構。</p>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/cats.js"></script>
+
+</body>
+</html>
